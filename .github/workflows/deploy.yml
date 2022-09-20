@@ -17,6 +17,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - run: ls
+      - run: "ls -la $HOME"
       - run: npm ci
       - run: npm run build
