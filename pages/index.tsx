@@ -28,16 +28,16 @@ const Container = styled.div`
 `;
 
 const subTitles = [
-    'I make websites.',
-    'I write apps.',
-    'I deploy code...'
+    'This is a sentence',
+    'This is another sentance',
+    'Sentence number 3'
 ];
 
 
 const Home: NextPage = () => {
 
     const mobileCutOff = 768;
-    const [isMobile, setIsMobile] = useState<boolean | undefined>(undefined);
+    const [isMobile, setIsMobile] = useState<boolean>(true);
     const text = useTypeContent(subTitles, 100, 2000, 3000)
 
     useEffect(() => {
@@ -67,7 +67,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-          <MobileContext.Provider value={!!isMobile}>
+          <MobileContext.Provider value={isMobile}>
               <Container>
                   {!isMobile && <LeftBar/>}
                   <div id={'#'}>
