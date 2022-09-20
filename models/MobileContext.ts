@@ -1,5 +1,5 @@
-import {createContext} from "react";
+import {createContext} from 'react';
 
-export const MobileContext = createContext(false);
+const MobileContext = createContext(false);
 
 export default MobileContext;

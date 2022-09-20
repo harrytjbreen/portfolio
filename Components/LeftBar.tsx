@@ -1,5 +1,3 @@
-import {useContext} from "react";
-import MobileContext from "../models/MobileContext";
 import Links from '../models/Links';
 import styled from "styled-components";
 
@@ -9,10 +7,9 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   background-color: black;
-  position: fixed;
   top: 0;
   height: 100vh;
-  width: 5vw;
+  width: 3rem;
 `;
 
 const Link = styled.a`
@@ -33,13 +30,12 @@ const Bar = styled.div`
 `;
 
 const LeftBar = () => {
-    const isMobile = useContext(MobileContext);
-    return !isMobile ? (
+    return (
         <Container>
             {Links.map(link => <Link href={link.link}><link.svg/></Link>)}
             <Bar/>
         </Container>
-    ) : <></>
+    )
 };
 
 export default LeftBar;

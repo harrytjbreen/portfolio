@@ -1,52 +1,62 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import React, {useEffect, useState} from "react";
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import {Title, SubTitle} from '../Components/Styled/Titles';
 import MobileContext from '../models/MobileContext';
 import LeftBar from "../Components/LeftBar";
+import useTypeContent from "../hooks/useTypeContent";
+
+const fadeIn = keyframes`
+    from {opacity: 0; transform: translate3d(0, -50%, 0);}
+    to {opacity: 1; transform: translate3d(0, 0, 0);}
+`
 
 const MainTitle = styled(Title)`
   text-align: left;
-  margin-inline: 3rem;
-  border-right: 0.5rem solid black;
   min-width: 1px;
-  width: fit-content;
+  animation: ${fadeIn} 1s ease-in both;
 `;
 
 const MainSubTitle = styled(SubTitle)`
   text-align: left;
-  margin-inline: 3rem;
+  animation: ${fadeIn} 1s 1s ease-in both;
 `;
 
 const Container = styled.div`
-  margin-left: 5vw;
+  display: flex;
 `;
 
-const NAME_CONST = 'Harry Breen.'
+const subTitles = [
+    'I make websites.',
+    'I write apps.',
+    'I deploy code...'
+];
+
 
 const Home: NextPage = () => {
 
     const mobileCutOff = 768;
-    const [isMobile, setIsMobile] = useState(false);
-    const [name, setName] = useState('');
+    const [isMobile, setIsMobile] = useState<boolean | undefined>(undefined);
+    const text = useTypeContent(subTitles, 100, 2000, 3000)
 
     useEffect(() => {
         const handleResize = () => setIsMobile(window.innerWidth <= mobileCutOff);
         window.addEventListener('resize', handleResize);
 
+        handleResize();
         return () => window.removeEventListener('resize', handleResize);
     },[]);
 
-    useEffect(() => {
-        if(name.length === NAME_CONST.length) return;
-
-        const time = name.length === NAME_CONST.length-1 ? 500 : 100;
-
-        setTimeout(() => {
-            setName(NAME_CONST.slice(0, name.length+1))
-        }, time)
-    }, [name]);
+    // useEffect(() => {
+    //     if(name.length === NAME_CONST.length) return;
+    //
+    //     const time = name.length === NAME_CONST.length-1 ? 500 : 100;
+    //
+    //     setTimeout(() => {
+    //         setName(NAME_CONST.slice(0, name.length+1))
+    //     }, time)
+    // }, [name]);
 
   return (
     <div>
@@ -57,14 +67,16 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-          <MobileContext.Provider value={isMobile}>
-              <LeftBar/>
+          <MobileContext.Provider value={!!isMobile}>
               <Container>
-                  <MainTitle>{name}</MainTitle>
-                  <MainSubTitle>I build web and mobile apps</MainSubTitle>
-                  {/*<Spacer/>*/}
-                  {/*<Spacer/>*/}
-                  {/*<Skills/>*/}
+                  {!isMobile && <LeftBar/>}
+                  <div id={'#'}>
+                      <MainTitle>Harry Breen</MainTitle>
+                      <MainSubTitle>{text}</MainSubTitle>
+                      {/*<Spacer/>*/}
+                      {/*<Spacer/>*/}
+                      {/*<Skills/>*/}
+                  </div>
               </Container>
           </MobileContext.Provider>
       </main>
