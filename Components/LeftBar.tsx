@@ -1,4 +1,4 @@
-import Links from '../models/Links';
+import Links from "../models/Links";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -13,7 +13,7 @@ const Container = styled.div`
 `;
 
 const Link = styled.a`
-  color: white;  
+  color: white;
   margin-bottom: 2rem;
   transform: scale(1.5);
   transition: transform 0.5s;
@@ -30,12 +30,16 @@ const Bar = styled.div`
 `;
 
 const LeftBar = () => {
-    return (
-        <Container>
-            {Links.map(link => <Link href={link.link}><link.svg/></Link>)}
-            <Bar/>
-        </Container>
-    )
+  return (
+    <Container>
+      {Links.map((link) => (
+        <Link href={link.link}>
+          <link.svg />
+        </Link>
+      ))}
+      <Bar />
+    </Container>
+  );
 };
 
 export default LeftBar;

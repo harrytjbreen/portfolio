@@ -9,6 +9,6 @@ const Title = styled.h1`
 const SubTitle = styled.h2`
   font-weight: bold;
   text-align: center;
-`
+`;
 
-export {Title, SubTitle};
+export { Title, SubTitle };
