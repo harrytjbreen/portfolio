@@ -1,15 +1,19 @@
-import Links from "../models/Links";
+import Links from "../model/Links";
 import styled from "styled-components";
+import VerticalBar from "./Styled/VerticalBar";
 
-const Container = styled.div`
+const NavContainer = styled.div`
+  position: fixed;
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  flex-direction: column;
-  background-color: black;
+  width: 4rem;
+  left: 0;
   top: 0;
+  bottom: 0;
   height: 100vh;
-  width: 3rem;
+  background-color: black;
 `;
 
 const Link = styled.a`
@@ -22,23 +26,16 @@ const Link = styled.a`
   }
 `;
 
-const Bar = styled.div`
-  height: 7.5rem;
-  width: 2px;
-  color: white;
-  background-color: white;
-`;
-
 const LeftBar = () => {
   return (
-    <Container>
+    <NavContainer>
       {Links.map((link) => (
         <Link href={link.link}>
           <link.svg />
         </Link>
       ))}
-      <Bar />
-    </Container>
+      <VerticalBar length={7.5} />
+    </NavContainer>
   );
 };
 

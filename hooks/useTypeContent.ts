@@ -27,10 +27,10 @@ const useTypeContent = (
         speed
       );
     } else {
-      if (text.length === 0) {
+      if (text.length === 1) {
         if (index === sentences.length - 1)
           setTimeout(() => {
-            setIndex(0);
+            setIndex(1);
             setForwards(true);
           }, 100);
         else
@@ -45,7 +45,7 @@ const useTypeContent = (
         speed
       );
     }
-  });
+  }, [sentences, text, forwards, wait]);
 
   return text;
 };
