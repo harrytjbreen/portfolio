@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import MobileContext from "../hooks/MobileContext";
 import Image from "next/image";
+import imageLoader from "../loader";
 
 interface Props {
   isMobile: boolean;
@@ -55,7 +56,10 @@ const About = () => {
               </p>
             </div>
             <ImageContainer>
-              <Image src={require("../public/headshot.jpeg")} />
+              <Image
+                loader={imageLoader}
+                src={require("../public/images/headshot.jpeg")}
+              />
             </ImageContainer>
             <div>
               <h3>About</h3>
