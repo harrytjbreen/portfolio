@@ -3,6 +3,9 @@ export interface Skill {
   level: 1 | 2 | 3 | 4 | 5;
 }
 
+//TODO add more skills
+//I should probably learn something else...
+
 export default [
   {
     name: "React",

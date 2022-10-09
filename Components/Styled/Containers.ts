@@ -8,14 +8,13 @@ interface Props {
 
 export const RootContainer = styled.div`
   & > * {
-    height: 99vh;
+    min-height: 100vh;
     border-bottom: 1px solid black;
   }
 `;
 
 const Container = styled.div<Props>`
   display: flex;
-  width: 100%;
   ${(props) => {
     if (props.column)
       return css`

@@ -1,6 +1,6 @@
 import { FC } from "react";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import Github from "../svg/Github";
+import LinkedIn from "../svg/LinkedIn";
 
 export interface Link {
   svg: FC;
@@ -9,11 +9,11 @@ export interface Link {
 
 export default [
   {
-    svg: GitHubIcon,
+    svg: Github,
     link: "https://github.com/harrytjbreen",
   },
   {
-    svg: LinkedInIcon,
+    svg: LinkedIn,
     link: "https://www.linkedin.com/in/harry-breen-b46372161/",
   },
 ] as Link[];

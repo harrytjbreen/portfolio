@@ -7,8 +7,7 @@ interface Props {
 const VerticalBar = styled.div<Props>`
   height: ${(props) => props.length}rem;
   width: 2px;
-  color: white;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.background};
 `;
 
 export default VerticalBar;
