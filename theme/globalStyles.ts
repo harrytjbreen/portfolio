@@ -9,6 +9,8 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
+    padding-inline: 4rem;
+     font-size: ${fontSizes[3]}px;
     color: ${(props) => props.theme.colors.primary};
     background-color: ${(props) => props.theme.colors.background};
   }

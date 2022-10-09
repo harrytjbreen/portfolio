@@ -1,18 +1,21 @@
 import React from "react";
+import { useTheme } from "styled-components";
 
 interface Props {
   filled?: boolean;
 }
 
 const Star: React.FC<Props> = ({ filled }) => {
+  const theme = useTheme();
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
       viewBox="0 0 24 24"
-      fill={filled ? "#000" : "none"}
-      stroke="currentColor"
+      fill={filled ? theme.colors.primary : "none"}
+      stroke={theme.colors.primary}
       strokeWidth={"2"}
       strokeLinejoin="round"
       className="feather feather-star"

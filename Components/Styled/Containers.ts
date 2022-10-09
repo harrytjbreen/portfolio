@@ -9,7 +9,7 @@ interface Props {
 export const RootContainer = styled.div`
   & > * {
     min-height: 100vh;
-    border-bottom: 1px solid black;
+    border-bottom: ${(props) => `1px solid ${props.theme.colors.primary}`};
   }
 `;
 
