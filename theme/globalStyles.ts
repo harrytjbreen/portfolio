@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    padding-inline: 4rem;
+    padding-inline: 4vw;
     font-size: ${fontSizes[3]}px;
     overflow-x: hidden;
     color: ${(props) => props.theme.colors.primary};
