@@ -1,17 +1,10 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import MobileContext from "../../hooks/MobileContext";
-import TimelineNodes from "../../model/TimelineNode";
-import Container from "../Styled/Containers";
+import TimelineNodes from "../../data/TimelineNodes";
+import Container, { NodesContainer } from "../Styled/Containers";
 import NodeCircle from "../Styled/NodeCircle";
 import HLine from "../Styled/HLine";
 import Node from "./Node";
-
-const NodesContainer = styled(Container)`
-  justify-content: space-between;
-  position: relative;
-  overflow: hidden;
-`;
 
 const Timeline: React.FC = () => {
   const setSelected = (id: number) => {
@@ -28,7 +21,7 @@ const Timeline: React.FC = () => {
         <Container hCenter column id={"timeline"}>
           <h1>Work</h1>
           <NodesContainer>
-            {!isMobile && <NodeCircle large />}
+            {!isMobile && <NodeCircle small />}
             {TimelineNodes.map((node, i) => (
               <Node
                 setSelected={setSelected}
@@ -37,11 +30,15 @@ const Timeline: React.FC = () => {
                 id={node.id}
               />
             ))}
-            {!isMobile && <NodeCircle large />}
+            {!isMobile && <NodeCircle small />}
             <HLine />
           </NodesContainer>
           <h3>{TimelineNodes[selected].caption}</h3>
-          <p>{TimelineNodes[selected].text}</p>
+          <ul>
+            {TimelineNodes[selected].bullets.map((bullet) => (
+              <li>{bullet}</li>
+            ))}
+          </ul>
         </Container>
       )}
     </MobileContext.Consumer>

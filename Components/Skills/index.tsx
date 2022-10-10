@@ -1,13 +1,7 @@
 import React from "react";
-import styled from "styled-components";
-import SkillsList from "../../model/Skill";
+import SkillsList from "../../data/Skills";
+import { SkillsContainer } from "../Styled/Containers";
 import SkillItem from "./SkillItem";
-
-const SkillsContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr));
-  grid-column-gap: 4rem;
-`;
 
 const Skills: React.FC = () => (
   <div id={"skills"}>

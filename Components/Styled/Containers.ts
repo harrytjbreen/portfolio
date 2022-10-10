@@ -7,6 +7,10 @@ interface Props {
   hCenter?: boolean;
 }
 
+interface AboutContainerProps {
+  isMobile: boolean;
+}
+
 export const RootContainer = styled.div`
   & > * {
     min-height: 100vh;
@@ -41,13 +45,37 @@ export const LinkContainer = styled(Container)`
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.background};
   animation: 0.5s 2s linear ${SlideDown} both;
-  & > * {
-    margin: 1.3rem 1rem 1rem 1rem;
-    transition: all 0.2s ease-in-out;
-    &:hover {
-      transform: scale(1.2) translateY(-5px);
-    }
-  }
+`;
+
+export const NodesContainer = styled(Container)`
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+`;
+
+export const ImageContainer = styled.div`
+  border-radius: 50%;
+  border: 2px solid ${(props) => props.theme.colors.primary};
+  overflow: hidden;
+`;
+
+export const AboutContainer = styled.div<AboutContainerProps>`
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: ${(props) =>
+    props.isMobile ? "1fr" : "1fr 1.5fr 1fr"};
+  align-items: center;
+  text-align: center;
+`;
+
+export const SkillsContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr));
+  grid-column-gap: 4rem;
+`;
+
+export const SkillItemContainer = styled(Container)`
+  justify-content: space-between;
 `;
 
 export default Container;

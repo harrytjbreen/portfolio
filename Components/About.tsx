@@ -1,27 +1,8 @@
 import React from "react";
-import styled from "styled-components";
-import MobileContext from "../hooks/MobileContext";
 import Image from "next/image";
+import MobileContext from "../hooks/MobileContext";
 import imageLoader from "../loader";
-
-interface Props {
-  isMobile: boolean;
-}
-
-const ImageContainer = styled.div`
-  border-radius: 50%;
-  border: 2px solid ${(props) => props.theme.colors.primary};
-  overflow: hidden;
-`;
-
-const AboutContainer = styled.div<Props>`
-  display: grid;
-  gap: 4rem;
-  grid-template-columns: ${(props) =>
-    props.isMobile ? "1fr" : "1fr 1.5fr 1fr"};
-  align-items: center;
-  text-align: center;
-`;
+import { AboutContainer, ImageContainer } from "./Styled/Containers";
 
 const About = () => {
   const getAge = () => {

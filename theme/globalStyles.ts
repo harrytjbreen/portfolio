@@ -30,6 +30,12 @@ const GlobalStyle = createGlobalStyle`
     text-align: center;
     font-size: ${fontSizes[5]}px;
   }
+  
+  ul {
+    & > li {
+      margin-block: 0.75rem;
+    }
+  }
 `;
 
 export default GlobalStyle;
