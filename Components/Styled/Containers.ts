@@ -14,7 +14,7 @@ interface AboutContainerProps {
 export const RootContainer = styled.div`
   & > * {
     min-height: 100vh;
-    border-bottom: ${(props) => `1px solid ${props.theme.colors.primary}`};
+    border-bottom: ${(props) => `2px solid ${props.theme.colors.primary}`};
   }
 `;
 
@@ -55,7 +55,7 @@ export const NodesContainer = styled(Container)`
 
 export const ImageContainer = styled.div`
   border-radius: 50%;
-  border: 2px solid ${(props) => props.theme.colors.primary};
+  border: 4px solid ${(props) => props.theme.colors.primary};
   overflow: hidden;
 `;
 

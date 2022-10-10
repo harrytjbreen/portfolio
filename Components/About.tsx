@@ -48,7 +48,9 @@ const About = () => {
                 I am a software developer based in Gloucestershire. I mainly
                 work on the frontend of web and mobile applications
                 professionally. However, in my free time I work on all sorts of
-                projects in a Full-Stack capability.
+                projects in a Full-Stack capability. Currently I am loving
+                working with AWS and am studying for the AWS Solutions Architect
+                Associate exam
               </p>
             </div>
           </AboutContainer>

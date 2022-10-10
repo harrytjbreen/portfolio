@@ -6,7 +6,7 @@ import { Skill } from "../model/Skill";
 export default [
   {
     name: "React",
-    level: 4,
+    level: 5,
   },
   {
     name: "Vue",
@@ -22,7 +22,7 @@ export default [
   },
   {
     name: "Node",
-    level: 3,
+    level: 4,
   },
   {
     name: "CSS/SCSS",
@@ -30,6 +30,18 @@ export default [
   },
   {
     name: "Python",
+    level: 3,
+  },
+  {
+    name: "AWS",
+    level: 3,
+  },
+  {
+    name: "Jest",
+    level: 4,
+  },
+  {
+    name: "Cypress",
     level: 3,
   },
 ].sort((a, b) =>
