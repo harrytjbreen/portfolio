@@ -36,7 +36,7 @@ export const LinkContainer = styled(Container)`
   position: absolute;
   border-radius: 0 0 10% 10%;
   top: 0;
-  left: 80vw;
+  right: 5rem;
   width: auto;
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.background};
