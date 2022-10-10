@@ -50,7 +50,7 @@ const About = () => {
                 professionally. However, in my free time I work on all sorts of
                 projects in a Full-Stack capability. Currently I am loving
                 working with AWS and am studying for the AWS Solutions Architect
-                Associate exam
+                Associate exam.
               </p>
             </div>
           </AboutContainer>
