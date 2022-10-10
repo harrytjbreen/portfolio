@@ -56,7 +56,7 @@ const Home: NextPage = () => {
           />
           <meta
             property="og:description"
-            content="The place to see all of Harry's web based work"
+            content="The place to see all of my web based work"
             key="ogdesc"
           />
           <meta
