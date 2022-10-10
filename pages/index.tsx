@@ -40,7 +40,19 @@ const Home: NextPage = () => {
         <GlobalStyle />
         <Head>
           <title>Harry Breen</title>
-          <meta name="description" content="Harry Breen" />
+          <meta name="description" content="Harry Breen's Portfolio" />
+          <meta name="author" content="Harry Breen" />
+          <meta property="og:url" content="harrybreen.co.uk" />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="Harry Breen's Portfolio" />
+          <meta
+            property="og:description"
+            content="The place to see all of Harry's web based work"
+          />
+          <meta
+            property="og:image"
+            content={require("../public/images/headshot.jpeg")}
+          />
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
