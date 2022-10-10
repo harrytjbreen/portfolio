@@ -15,6 +15,7 @@ export const RootContainer = styled.div`
 
 const Container = styled.div<Props>`
   display: flex;
+  width: 100%;
   ${(props) => {
     if (props.column)
       return css`

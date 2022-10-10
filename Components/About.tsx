@@ -43,7 +43,7 @@ const About = () => {
           <AboutContainer isMobile={isMobile}>
             <div>
               <h3>Details</h3>
-              <p>
+              <div>
                 <div>
                   <b>Age:</b> {getAge()}
                 </div>
@@ -53,7 +53,7 @@ const About = () => {
                 <div>
                   <b>Email:</b> harrytjbreen@gmail.com
                 </div>
-              </p>
+              </div>
             </div>
             <ImageContainer>
               <Image

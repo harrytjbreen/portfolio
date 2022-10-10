@@ -35,4 +35,6 @@ export default [
     name: "Python",
     level: 3,
   },
-] as Skill[];
+].sort((a, b) =>
+  a.level < b.level ? 1 : b.level < a.level ? -1 : 0
+) as Skill[];

@@ -10,6 +10,7 @@ import Skills from "../Components/Skills";
 import About from "../Components/About";
 import useIsMobile from "../hooks/useIsMobile";
 import MobileContext from "../hooks/MobileContext";
+import Timeline from "../Components/Timeline";
 
 const Home: NextPage = () => {
   const [isDark, setIsDark] = useState(false);
@@ -47,6 +48,7 @@ const Home: NextPage = () => {
             <NameContent />
             <About />
             <Skills />
+            <Timeline />
           </RootContainer>
         </main>
 
