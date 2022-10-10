@@ -70,7 +70,7 @@ export const AboutContainer = styled.div<AboutContainerProps>`
 
 export const SkillsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   grid-column-gap: 4rem;
 `;
 

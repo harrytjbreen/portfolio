@@ -10,9 +10,9 @@ interface Props {
 
 const Link = styled.a<Props>`
   margin: 1.3rem 1rem 1rem 1rem;
-  animation: ${Bounce} 0.5s ${(props) => 2.5 + props.i / 6}s ease-in-out both;
   transition: all 0.2s ease-in-out;
-  &:hover {
+  animation: ${Bounce} 0.5s ${(props) => 2.5 + props.i / 6}s ease-in-out both;
+  :hover {
     transform: scale(1.2) translateY(-5px);
   }
 `;

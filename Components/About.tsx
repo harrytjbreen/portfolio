@@ -45,10 +45,10 @@ const About = () => {
             <div>
               <h3>About</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aliquam corporis deserunt dolor, doloribus dolorum ducimus ea
-                eligendi enim ex fugit hic incidunt iusto labore quaerat
-                quisquam similique sint velit, veniam.
+                I am a software developer based in Gloucestershire. I mainly
+                work on the frontend of web and mobile applications
+                professionally. However, in my free time I work on all sorts of
+                projects in a Full-Stack capability.
               </p>
             </div>
           </AboutContainer>
