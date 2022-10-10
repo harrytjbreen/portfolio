@@ -11,6 +11,7 @@ import About from "../Components/About";
 import useIsMobile from "../hooks/useIsMobile";
 import MobileContext from "../hooks/MobileContext";
 import Timeline from "../Components/Timeline";
+import LinkDialog from "../Components/LinkDialog";
 
 const Home: NextPage = () => {
   const [isDark, setIsDark] = useState(false);
@@ -44,6 +45,7 @@ const Home: NextPage = () => {
         </Head>
 
         <main>
+          <LinkDialog />
           <RootContainer>
             <NameContent />
             <About />
