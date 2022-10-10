@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta
           property="og:title"
-          content="Harry Breen's Portfolio"
+          content="Hi I am Harry, a Frontend developer"
           key="ogtitle"
         />
         <meta
