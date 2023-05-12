@@ -13,7 +13,7 @@ const useTypeContent = (
 
   useEffect(() => {
     setTimeout(() => setWait(false), delay);
-  }, []);
+  }, [delay]);
 
   useEffect(() => {
     if (wait) return;
@@ -30,7 +30,7 @@ const useTypeContent = (
       if (text.length === 1) {
         if (index === sentences.length - 1)
           setTimeout(() => {
-            setIndex(1);
+            setIndex(0);
             setForwards(true);
           }, 100);
         else
@@ -45,7 +45,7 @@ const useTypeContent = (
         speed
       );
     }
-  }, [sentences, text, forwards, wait]);
+  }, [index, sentences, text, forwards, wait, speed, timeAtEnd]);
 
   return text;
 };

@@ -21,7 +21,7 @@ const LinkDialog: React.FC = () => {
   return (
     <LinkContainer>
       {Links.map((link, i) => (
-        <Link i={i} href={link.link}>
+        <Link i={i} href={link.link} key={link.link}>
           <link.svg />
         </Link>
       ))}

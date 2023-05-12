@@ -14,7 +14,6 @@ const Timeline: React.FC = () => {
   };
 
   const [selected, _setSelected] = useState(0);
-
   return (
     <MobileContext.Consumer>
       {(isMobile) => (
@@ -28,6 +27,7 @@ const Timeline: React.FC = () => {
                 isSelected={i === selected}
                 date={node.date}
                 id={node.id}
+                key={node.id}
               />
             ))}
             {!isMobile && <NodeCircle small />}
@@ -36,7 +36,7 @@ const Timeline: React.FC = () => {
           <h3>{TimelineNodes[selected].caption}</h3>
           <ul>
             {TimelineNodes[selected].bullets.map((bullet) => (
-              <li>{bullet}</li>
+              <li key={bullet}>{bullet}</li>
             ))}
           </ul>
         </Container>
